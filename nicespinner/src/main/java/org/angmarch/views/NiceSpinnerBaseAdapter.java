@@ -1,6 +1,7 @@
 package org.angmarch.views;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -58,7 +59,9 @@ public abstract class NiceSpinnerBaseAdapter<T> extends BaseAdapter {
         }
 
         textView.setText(spinnerTextFormatter.format(getItem(position).toString()));
-        textView.setTextColor(textColor);
+//        textView.setTextColor(textColor);
+
+        textView.setTextColor(Color.BLUE);
         return convertView;
     }
 
