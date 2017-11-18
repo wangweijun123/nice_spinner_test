@@ -2,9 +2,7 @@ package org.angmarch.views;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Build;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -50,9 +48,9 @@ public abstract class NiceSpinnerBaseAdapter<T> extends BaseAdapter {
             convertView = View.inflate(context, R.layout.spinner_list_item, null);
             textView = (TextView) convertView.findViewById(R.id.text_view_spinner);
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                textView.setBackground(ContextCompat.getDrawable(context, backgroundSelector));
-            }
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//                textView.setBackground(ContextCompat.getDrawable(context, backgroundSelector));
+//            }
             convertView.setTag(new ViewHolder(textView));
         } else {
             textView = ((ViewHolder) convertView.getTag()).textView;

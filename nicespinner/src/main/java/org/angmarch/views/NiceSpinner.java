@@ -136,9 +136,13 @@ public class NiceSpinner extends AppCompatTextView {
                 defaultPadding);
         setClickable(true);
 
-        backgroundSelector = typedArray.getResourceId(R.styleable.NiceSpinner_backgroundSelector, R.drawable.selector);
-        setBackgroundResource(backgroundSelector);
-        textColor = typedArray.getColor(R.styleable.NiceSpinner_textTint, getDefaultTextColor(context));
+//        backgroundSelector = typedArray.getResourceId(R.styleable.NiceSpinner_backgroundSelector, R.drawable.selector);
+        backgroundSelector = R.color.white;
+//        setBackgroundResource(backgroundSelector);// 选中的背景颜色
+
+
+//        textColor = typedArray.getColor(R.styleable.NiceSpinner_textTint, getDefaultTextColor(context));
+        textColor = Color.RED;// // 设置选中的字体颜色
         setTextColor(textColor);
 
         listView = new ListView(context);
@@ -251,7 +255,7 @@ public class NiceSpinner extends AppCompatTextView {
                 .resolveAttribute(android.R.attr.textColorPrimary, typedValue, true);
         TypedArray typedArray = context.obtainStyledAttributes(typedValue.data,
                 new int[]{android.R.attr.textColorPrimary});
-        int defaultTextColor = typedArray.getColor(0, Color.BLACK);
+        int defaultTextColor = typedArray.getColor(0, Color.BLUE);
         typedArray.recycle();
         return defaultTextColor;
     }

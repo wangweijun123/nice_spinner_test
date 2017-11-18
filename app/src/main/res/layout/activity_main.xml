@@ -24,7 +24,7 @@
         android:popupBackground="#f0000000"/>
     <org.angmarch.views.NiceSpinner
         android:id="@+id/nice_spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"/>
 </LinearLayout>
